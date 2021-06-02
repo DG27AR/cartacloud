@@ -50,7 +50,7 @@
               <a class="nav-link" href="#"><i class="fas fa-home ms-2"></i> Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-info-circle ms-2"></i> Planes</a>
+              <a class="nav-link" href="#"><i class="fas fa-hand-holding-usd ms-2"></i> Planes</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="#"><i class="fas fa-chalkboard-teacher ms-2"></i> Demo</a>
@@ -61,7 +61,7 @@
           </ul>
 
           <button class="btn btn-outline-success ms-1" type="submit">
-            INGRESAR A LA DEMO <i class="fas fa-sign-in-alt"></i>
+            INGRESAR <i class="fas fa-sign-in-alt"></i>
           </button>
         </div>
       </div>
@@ -154,9 +154,9 @@
       </div>
     </div>
 
-    <!-- BUY -->
+    <!-- HOW DOES IT WORK-->
 
-    <div class="container mt-5">
+    <!-- <div class="container mt-5">
       <h5 class="mt-1 card-header"><i class="fas fa-cog"></i> ¿COMO FUNCIONA?</h5>
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
@@ -241,7 +241,114 @@
           </div>
         </div>
       </div>
+    </div> -->
+
+    <!-- PLANS CARDS -->
+
+    <div class="container mt-5">
+      <h5 class="mt-1 card-header border-0"><i class="fas fa-hand-holding-usd"></i> NUESTROS PLANES</h5>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              <p><i class="fas fa-angle-double-right"></i> PLAN 1</p>
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <i class="fas fa-thumbs-up"></i> Caracteristica 1 <br />
+              <i class="fas fa-thumbs-up"></i> Caracteristica 1 <br />
+              <i class="fas fa-thumbs-up"></i> Caracteristica 1 <br />
+              <br />
+              <i class="fas fa-dollar-sign"></i> Precio<br />
+            </div>
+            <button class="btn btn-outline-success ms-3 mb-3" type="submit">
+              CONTRATAR <i class="fas fa-shopping-cart"></i>
+            </button>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              <p><i class="fas fa-angle-double-right"></i> PLAN 2</p>
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <i class="fas fa-thumbs-up"></i> Caracteristica 1 <br />
+              <i class="fas fa-thumbs-up"></i> Caracteristica 1 <br />
+              <i class="fas fa-thumbs-up"></i> Caracteristica 1 <br />
+              <br />
+              <i class="fas fa-dollar-sign"></i> Precio<br />
+            </div>
+            <button class="btn btn-outline-success ms-3 mb-3" type="submit">
+              CONTRATAR <i class="fas fa-shopping-cart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Footer Start -->
+    <footer class="mt-5 header-background">
+      <div class="container text-white">
+        <div class="container pt-1">
+          <h5 class="mt-2"><i class="far fa-envelope"></i> CONTACTO</h5>
+
+          <form class="needs-validation" action="https://formspree.io/f/meqvgrye" method="POST" novalidate>
+            <div class="mb-3">
+              <label for="validationCustom01" class="form-label custom-TextOrange">Dirección de Mail</label>
+              <input type="email" name="_replyto" class="form-control more-rounded" id="validationCustom01" required />
+              <div class="invalid-feedback">Please, provide a valid email direction.</div>
+            </div>
+            <div class="mb-3">
+              <label for="validationCustom02" class="form-label custom-TextOrange">Su Mensaje</label>
+              <textarea
+                class="form-control text-area-size"
+                name="message"
+                id="validationCustom02"
+                rows="14"
+                required
+              ></textarea>
+              <div class="invalid-feedback">Please, write your message here.</div>
+            </div>
+
+            <button type="submit" class="btn btn-outline-light mt-3">Submit</button>
+          </form>
+        </div>
+
+        <div class="container">
+          <div class="mt-4 text-center">
+            <p>All Rights Reserved - Copyright (c) 2021 Diego Grassino</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -257,5 +364,31 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     -->
+    <!-- Bootstrap Validation -->
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict';
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation');
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            'submit',
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add('was-validated');
+            },
+            false
+          );
+        });
+      })();
+    </script>
   </body>
 </html>

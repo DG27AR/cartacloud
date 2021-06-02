@@ -109,3 +109,9 @@ body {
   font-size: 1em;
   color: whitesmoke;
 }
+
+/* Contact Form */
+
+.text-area-size {
+  max-height: 9em;
+}
