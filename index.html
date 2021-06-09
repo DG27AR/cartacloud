@@ -25,9 +25,41 @@
     <!-- Custom Styles (override Bootstrap) -->
     <link rel="stylesheet" href="/css/styles.css" />
 
+    <!-- Custom JS -->
+    <script src="script/script.js"></script>
+
     <title>CartaCLOUD</title>
   </head>
   <body>
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-light">
+            <div class="container">
+              <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+              <img class="modal-title custom-LogoImg float-end" id="exampleModalLabel" src="/img/logo4.png" alt="" />
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="login-form">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="login-form-email" aria-describedby="emailHelp" required />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="login-form-password" required />
+              </div>
+
+              <button type="submit" class="btn btn-primary">INGRESAR <i class="fas fa-sign-in-alt"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Navbar -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light container">
@@ -60,8 +92,9 @@
             </li>
           </ul>
 
-          <button class="btn btn-outline-success ms-1" type="submit">
-            INGRESAR <i class="fas fa-sign-in-alt"></i>
+          <button class="btn btn-outline-success ms-1" data-bs-toggle="modal" data-bs-target="#loginModal">
+            INGRESAR
+            <i class="fas fa-sign-in-alt"></i>
           </button>
         </div>
       </div>
@@ -106,14 +139,20 @@
         <div class="card col-md-6 col-lg-4 pt-1">
           <img src="/img/connect.png" class="card-img-top mt-2" alt="..." />
           <div class="card-body">
-            <h5 class="custom-TitleFont card-title"><i class="fas fa-plus"></i> CONECTADO</h5>
+            <h5 class="custom-TitleFont card-title">
+              <i class="fas fa-plus"></i>
+              CONECTADO
+            </h5>
             <p class="card-text">Llegue a sus clientes a partir de un código QR, directo a su menú y a WhatsApp.</p>
           </div>
         </div>
         <div class="card col-md-6 col-lg-4 pt-1">
           <img src="/img/menu.png" class="card-img-top mt-2" alt="..." />
           <div class="card-body">
-            <h5 class="custom-TitleFont card-title"><i class="fas fa-plus"></i> CUIDADO</h5>
+            <h5 class="custom-TitleFont card-title">
+              <i class="fas fa-plus"></i>
+              CUIDADO
+            </h5>
             <p class="card-text">
               Utilice la carta QR en su local, minimice el uso de cartas impresas y cumpla normas sanitarias.
             </p>
@@ -122,21 +161,30 @@
         <div class="card col-md-6 col-lg-4 pt-1">
           <img src="/img/selfadmin.png" class="card-img-top mt-2" alt="..." />
           <div class="card-body">
-            <h5 class="custom-TitleFont card-title"><i class="fas fa-plus"></i> SIMPLE</h5>
+            <h5 class="custom-TitleFont card-title">
+              <i class="fas fa-plus"></i>
+              SIMPLE
+            </h5>
             <p class="card-text">Completamente auto administrable, haga todo desde su celular o computadora.</p>
           </div>
         </div>
         <div class="card col-md-6 col-lg-4 pt-1">
           <img src="/img/incomes.png" class="card-img-top mt-2" alt="..." />
           <div class="card-body">
-            <h5 class="custom-TitleFont card-title"><i class="fas fa-minus"></i> COMISIONES</h5>
+            <h5 class="custom-TitleFont card-title">
+              <i class="fas fa-minus"></i>
+              COMISIONES
+            </h5>
             <p class="card-text">Venda en forma directa, no cobramos comisiones por venta ni hay letra chica.</p>
           </div>
         </div>
         <div class="card col-md-6 col-lg-4 pt-1">
           <img src="/img/save.png" class="card-img-top mt-2" alt="..." />
           <div class="card-body">
-            <h5 class="custom-TitleFont card-title"><i class="fas fa-minus"></i> INVERSIÓN</h5>
+            <h5 class="custom-TitleFont card-title">
+              <i class="fas fa-minus"></i>
+              INVERSIÓN
+            </h5>
             <p class="card-text">
               Nos adaptamos para que invierta lo mínimo posible, pague nuestro servicio una única vez.
             </p>
@@ -145,7 +193,10 @@
         <div class="card col-md-6 col-lg-4 pt-1">
           <img src="/img/whatsapp.png" class="card-img-top mt-2" alt="..." />
           <div class="card-body">
-            <h5 class="custom-TitleFont card-title"><i class="fas fa-minus"></i> COMPLICACIÓN</h5>
+            <h5 class="custom-TitleFont card-title">
+              <i class="fas fa-minus"></i>
+              COMPLICACIÓN
+            </h5>
             <p class="card-text">
               Solo necesitará estar atento a su Whatsapp, no hace falta cargarse de tareas adicionales.
             </p>
@@ -258,7 +309,10 @@
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              <p><i class="fas fa-angle-double-right"></i> PLAN 1</p>
+              <p>
+                <i class="fas fa-angle-double-right"></i>
+                PLAN 1
+              </p>
             </button>
           </h2>
           <div
@@ -268,14 +322,19 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              <i class="fas fa-thumbs-up"></i> Caracteristica 1 <br />
-              <i class="fas fa-thumbs-up"></i> Caracteristica 1 <br />
-              <i class="fas fa-thumbs-up"></i> Caracteristica 1 <br />
+              <i class="fas fa-thumbs-up"></i>
+              Caracteristica 1 <br />
+              <i class="fas fa-thumbs-up"></i>
+              Caracteristica 1 <br />
+              <i class="fas fa-thumbs-up"></i>
+              Caracteristica 1 <br />
               <br />
-              <i class="fas fa-dollar-sign"></i> Precio<br />
+              <i class="fas fa-dollar-sign"></i>
+              Precio<br />
             </div>
             <button class="btn btn-outline-success ms-3 mb-3" type="submit">
-              CONTRATAR <i class="fas fa-shopping-cart"></i>
+              CONTRATAR
+              <i class="fas fa-shopping-cart"></i>
             </button>
           </div>
         </div>
@@ -289,7 +348,10 @@
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              <p><i class="fas fa-angle-double-right"></i> PLAN 2</p>
+              <p>
+                <i class="fas fa-angle-double-right"></i>
+                PLAN 2
+              </p>
             </button>
           </h2>
           <div
@@ -299,14 +361,19 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              <i class="fas fa-thumbs-up"></i> Caracteristica 1 <br />
-              <i class="fas fa-thumbs-up"></i> Caracteristica 1 <br />
-              <i class="fas fa-thumbs-up"></i> Caracteristica 1 <br />
+              <i class="fas fa-thumbs-up"></i>
+              Caracteristica 1 <br />
+              <i class="fas fa-thumbs-up"></i>
+              Caracteristica 1 <br />
+              <i class="fas fa-thumbs-up"></i>
+              Caracteristica 1 <br />
               <br />
-              <i class="fas fa-dollar-sign"></i> Precio<br />
+              <i class="fas fa-dollar-sign"></i>
+              Precio<br />
             </div>
             <button class="btn btn-outline-success ms-3 mb-3" type="submit">
-              CONTRATAR <i class="fas fa-shopping-cart"></i>
+              CONTRATAR
+              <i class="fas fa-shopping-cart"></i>
             </button>
           </div>
         </div>
@@ -317,7 +384,10 @@
     <footer class="mt-5 header-background">
       <div class="container text-white">
         <div class="container pt-1">
-          <h5 class="mt-2"><i class="far fa-envelope"></i> CONTACTO</h5>
+          <h5 class="mt-2">
+            <i class="far fa-envelope"></i>
+            CONTACTO
+          </h5>
 
           <form class="needs-validation" action="https://formspree.io/f/meqvgrye" method="POST" novalidate>
             <div class="mb-3">
@@ -389,6 +459,26 @@
           );
         });
       })();
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+    <!-- FIREBASE -->
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: 'AIzaSyBMkzj7LZ24tmrUBbrDOdduiRrWEt4uGEg',
+        authDomain: 'cartacloud-576b7.firebaseapp.com',
+        projectId: 'cartacloud-576b7',
+        storageBucket: 'cartacloud-576b7.appspot.com',
+        messagingSenderId: '741852151583',
+        appId: '1:741852151583:web:afced28ef19f95bbb8fa2a',
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
     </script>
   </body>
 </html>
