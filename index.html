@@ -23,191 +23,176 @@
     <script src="https://kit.fontawesome.com/405d5358c0.js" crossorigin="anonymous"></script>
 
     <!-- Custom Styles (override Bootstrap) -->
-    <link rel="stylesheet" href="/css/styles.css" />
-
-    <!-- Custom JS -->
-    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
 
     <title>CartaCLOUD</title>
-  </head>
-  <body>
-    <!-- Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header bg-light">
-            <div class="container">
-              <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
-              <img class="modal-title custom-LogoImg float-end" id="exampleModalLabel" src="/img/logo4.png" alt="" />
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form id="login-form">
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="login-form-email" aria-describedby="emailHelp" required />
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="login-form-password" required />
-              </div>
+    <html>
+      <body>
+        <!-- Navbar -->
 
-              <button type="submit" class="btn btn-primary">INGRESAR <i class="fas fa-sign-in-alt"></i></button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Navbar -->
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light container">
-      <div class="container-fluid">
-        <a class="navbar-brand custom-TitleFont" href="#"><img class="custom-LogoImg" src="/img/logo4.png" alt="" /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-home ms-2"></i> Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-hand-holding-usd ms-2"></i> Planes</a>
-            </li>
-            <!-- <li class="nav-item">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white container">
+          <div class="container-fluid">
+            <a class="navbar-brand custom-TitleFont" href="#"
+              ><img class="custom-LogoImg" src="/img/logo4.png" alt=""
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-home ms-2"></i> Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-hand-holding-usd ms-2"></i> Planes</a>
+                </li>
+                <!-- <li class="nav-item">
               <a class="nav-link" href="#"><i class="fas fa-chalkboard-teacher ms-2"></i> Demo</a>
             </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-envelope ms-2"></i> Contacto</a>
-            </li>
-          </ul>
-
-          <button class="btn btn-outline-success ms-1" data-bs-toggle="modal" data-bs-target="#loginModal">
-            INGRESAR
-            <i class="fas fa-sign-in-alt"></i>
-          </button>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Header Start -->
-    <div id="home"></div>
-    <header id="header">
-      <div class="row">
-        <div class="col-md-12 header-background">
-          <div class="header-text">
-            <div class="mt-5">
-              <h1 class="custom-TitleFont custom-TextWhite">
-                Comenzar a operar con un menú QR online esta
-                <span class="custom-TextOrange">al alcance de tu mano</span>
-              </h1>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-envelope ms-2"></i> Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/admin/admin.html"><i class="fas fa-sliders-h ms-2"></i> Panel</a>
+                </li>
+              </ul>
             </div>
-            <!-- <div class="mt-4 header-subtitle custom-TextWhite">
+          </div>
+        </nav>
+
+        <!-- Header Start -->
+        <div id="home"></div>
+        <header id="header">
+          <div class="row">
+            <div class="col-md-12 header-background">
+              <div class="header-text">
+                <div class="mt-5">
+                  <h1 class="custom-TitleFont custom-TextWhite">
+                    Comenzar a operar con un menú QR online esta
+                    <span class="custom-TextOrange">al alcance de tu mano</span>
+                  </h1>
+                </div>
+                <!-- <div class="mt-4 header-subtitle custom-TextWhite">
               <h5 class="custom-HeaderSubText">
                 Desde DG27AR te acercamos una solución para actualizar tu menú desde un solo lugar y buscarlo con código
                 QR, tanto desde la mesa como desde casa.
               </h5>
             </div> -->
-            <div class="header-button mt-4 header-content-button">
-              <a class="btn btn-lg btn-outline-light" href="#about-me">Conozcanos</a>
+                <div class="header-button mt-4 header-content-button">
+                  <a class="btn btn-lg btn-outline-light" href="#about-me">CONTRATAR</a>
+                </div>
+              </div>
+              <div class="mt-5 custom-HeroSVG container custom-TextBlue1">
+                <i class="fas fa-ice-cream mx-4"></i><i class="fas fa-pizza-slice mx-4"></i>
+
+                <i class="fas fa-qrcode mx-4"></i><i class="fas fa-hamburger mx-4"></i
+                ><i class="fas fa-hotdog mx-4 floatSVG"></i><i class="fas fa-coffee mx-4"></i>
+              </div>
             </div>
           </div>
-          <div class="mt-5 custom-HeroSVG container custom-TextBlue1">
-            <i class="fas fa-ice-cream mx-4"></i><i class="fas fa-pizza-slice mx-4"></i>
+        </header>
 
-            <i class="fas fa-qrcode mx-4"></i><i class="fas fa-hamburger mx-4"></i
-            ><i class="fas fa-hotdog mx-4 floatSVG"></i><i class="fas fa-coffee mx-4"></i>
-          </div>
-        </div>
-      </div>
-    </header>
+        <!-- Clients Banner -->
 
-    <!-- CARDS -->
+        <div class="container mt-4">
+          <div class="card">
+            <div class="card-header"><i class="fas fa-exclamation-triangle"></i> ¿YA ES CLIENTE?</div>
+            <div class="card-body">
+              <!-- <h5 class="card-title">Panel de control</h5> -->
+              <p class="card-text">Ingrese para administrar su carta online.</p>
+              <div class="text-center">
+                <a class="btn btn-lg btn-outline-success" href="/admin/admin.html"
+                  ><i class="fas fa-sliders-h"></i> IR AL PANEL</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <div class="card-group mt-5 px-4 container">
-      <div class="row">
-        <div class="card col-md-6 col-lg-4 pt-1">
-          <img src="/img/connect.png" class="card-img-top mt-2" alt="..." />
-          <div class="card-body">
-            <h5 class="custom-TitleFont card-title">
-              <i class="fas fa-plus"></i>
-              CONECTADO
-            </h5>
-            <p class="card-text">Llegue a sus clientes a partir de un código QR, directo a su menú y a WhatsApp.</p>
-          </div>
-        </div>
-        <div class="card col-md-6 col-lg-4 pt-1">
-          <img src="/img/menu.png" class="card-img-top mt-2" alt="..." />
-          <div class="card-body">
-            <h5 class="custom-TitleFont card-title">
-              <i class="fas fa-plus"></i>
-              CUIDADO
-            </h5>
-            <p class="card-text">
-              Utilice la carta QR en su local, minimice el uso de cartas impresas y cumpla normas sanitarias.
-            </p>
-          </div>
-        </div>
-        <div class="card col-md-6 col-lg-4 pt-1">
-          <img src="/img/selfadmin.png" class="card-img-top mt-2" alt="..." />
-          <div class="card-body">
-            <h5 class="custom-TitleFont card-title">
-              <i class="fas fa-plus"></i>
-              SIMPLE
-            </h5>
-            <p class="card-text">Completamente auto administrable, haga todo desde su celular o computadora.</p>
-          </div>
-        </div>
-        <div class="card col-md-6 col-lg-4 pt-1">
-          <img src="/img/incomes.png" class="card-img-top mt-2" alt="..." />
-          <div class="card-body">
-            <h5 class="custom-TitleFont card-title">
-              <i class="fas fa-minus"></i>
-              COMISIONES
-            </h5>
-            <p class="card-text">Venda en forma directa, no cobramos comisiones por venta ni hay letra chica.</p>
-          </div>
-        </div>
-        <div class="card col-md-6 col-lg-4 pt-1">
-          <img src="/img/save.png" class="card-img-top mt-2" alt="..." />
-          <div class="card-body">
-            <h5 class="custom-TitleFont card-title">
-              <i class="fas fa-minus"></i>
-              INVERSIÓN
-            </h5>
-            <p class="card-text">
-              Nos adaptamos para que invierta lo mínimo posible, pague nuestro servicio una única vez.
-            </p>
-          </div>
-        </div>
-        <div class="card col-md-6 col-lg-4 pt-1">
-          <img src="/img/whatsapp.png" class="card-img-top mt-2" alt="..." />
-          <div class="card-body">
-            <h5 class="custom-TitleFont card-title">
-              <i class="fas fa-minus"></i>
-              COMPLICACIÓN
-            </h5>
-            <p class="card-text">
-              Solo necesitará estar atento a su Whatsapp, no hace falta cargarse de tareas adicionales.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+        <!-- CARDS -->
 
-    <!-- HOW DOES IT WORK-->
+        <div class="card-group mt-5 px-4 container">
+          <div class="row">
+            <div class="card col-md-6 col-lg-4 pt-1">
+              <img src="/img/connect.png" class="card-img-top mt-2" alt="..." />
+              <div class="card-body">
+                <h5 class="custom-TitleFont card-title">
+                  <i class="fas fa-plus"></i>
+                  CONECTADO
+                </h5>
+                <p class="card-text">Llegue a sus clientes a partir de un código QR, directo a su menú y a WhatsApp.</p>
+              </div>
+            </div>
+            <div class="card col-md-6 col-lg-4 pt-1">
+              <img src="/img/menu.png" class="card-img-top mt-2" alt="..." />
+              <div class="card-body">
+                <h5 class="custom-TitleFont card-title">
+                  <i class="fas fa-plus"></i>
+                  CUIDADO
+                </h5>
+                <p class="card-text">
+                  Utilice la carta QR en su local, minimice el uso de cartas impresas y cumpla normas sanitarias.
+                </p>
+              </div>
+            </div>
+            <div class="card col-md-6 col-lg-4 pt-1">
+              <img src="/img/selfadmin.png" class="card-img-top mt-2" alt="..." />
+              <div class="card-body">
+                <h5 class="custom-TitleFont card-title">
+                  <i class="fas fa-plus"></i>
+                  SIMPLE
+                </h5>
+                <p class="card-text">Completamente auto administrable, haga todo desde su celular o computadora.</p>
+              </div>
+            </div>
+            <div class="card col-md-6 col-lg-4 pt-1">
+              <img src="/img/incomes.png" class="card-img-top mt-2" alt="..." />
+              <div class="card-body">
+                <h5 class="custom-TitleFont card-title">
+                  <i class="fas fa-minus"></i>
+                  COMISIONES
+                </h5>
+                <p class="card-text">Venda en forma directa, no cobramos comisiones por venta ni hay letra chica.</p>
+              </div>
+            </div>
+            <div class="card col-md-6 col-lg-4 pt-1">
+              <img src="/img/save.png" class="card-img-top mt-2" alt="..." />
+              <div class="card-body">
+                <h5 class="custom-TitleFont card-title">
+                  <i class="fas fa-minus"></i>
+                  INVERSIÓN
+                </h5>
+                <p class="card-text">
+                  Nos adaptamos para que invierta lo mínimo posible, pague nuestro servicio una única vez.
+                </p>
+              </div>
+            </div>
+            <div class="card col-md-6 col-lg-4 pt-1">
+              <img src="/img/whatsapp.png" class="card-img-top mt-2" alt="..." />
+              <div class="card-body">
+                <h5 class="custom-TitleFont card-title">
+                  <i class="fas fa-minus"></i>
+                  COMPLICACIÓN
+                </h5>
+                <p class="card-text">
+                  Solo necesitará estar atento a su Whatsapp, no hace falta cargarse de tareas adicionales.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <!-- <div class="container mt-5">
+        <!-- HOW DOES IT WORK-->
+
+        <!-- <div class="container mt-5">
       <h5 class="mt-1 card-header"><i class="fas fa-cog"></i> ¿COMO FUNCIONA?</h5>
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
@@ -294,191 +279,179 @@
       </div>
     </div> -->
 
-    <!-- PLANS CARDS -->
+        <!-- PLANS CARDS -->
 
-    <div class="container mt-5">
-      <h5 class="mt-1 card-header border-0"><i class="fas fa-hand-holding-usd"></i> NUESTROS PLANES</h5>
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              <p>
-                <i class="fas fa-angle-double-right"></i>
-                PLAN 1
-              </p>
-            </button>
-          </h2>
-          <div
-            id="collapseOne"
-            class="accordion-collapse collapse show"
-            aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body">
-              <i class="fas fa-thumbs-up"></i>
-              Caracteristica 1 <br />
-              <i class="fas fa-thumbs-up"></i>
-              Caracteristica 1 <br />
-              <i class="fas fa-thumbs-up"></i>
-              Caracteristica 1 <br />
-              <br />
-              <i class="fas fa-dollar-sign"></i>
-              Precio<br />
+        <div class="container mt-5">
+          <h5 class="mt-1 card-header border-0"><i class="fas fa-hand-holding-usd"></i> NUESTROS PLANES</h5>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  <p>
+                    <i class="fas fa-angle-double-right"></i>
+                    PLAN 1
+                  </p>
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <i class="fas fa-thumbs-up"></i>
+                  Caracteristica 1 <br />
+                  <i class="fas fa-thumbs-up"></i>
+                  Caracteristica 1 <br />
+                  <i class="fas fa-thumbs-up"></i>
+                  Caracteristica 1 <br />
+                  <br />
+                  <i class="fas fa-dollar-sign"></i>
+                  Precio<br />
+                </div>
+                <button class="btn btn-outline-success ms-3 mb-3" type="submit">
+                  <i class="fas fa-shopping-cart"></i> CONTRATAR
+                </button>
+              </div>
             </div>
-            <button class="btn btn-outline-success ms-3 mb-3" type="submit">
-              CONTRATAR
-              <i class="fas fa-shopping-cart"></i>
-            </button>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  <p>
+                    <i class="fas fa-angle-double-right"></i>
+                    PLAN 2
+                  </p>
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <i class="fas fa-thumbs-up"></i>
+                  Caracteristica 1 <br />
+                  <i class="fas fa-thumbs-up"></i>
+                  Caracteristica 1 <br />
+                  <i class="fas fa-thumbs-up"></i>
+                  Caracteristica 1 <br />
+                  <br />
+                  <i class="fas fa-dollar-sign"></i>
+                  Precio<br />
+                </div>
+                <button class="btn btn-outline-success ms-3 mb-3" type="submit">
+                  <i class="fas fa-shopping-cart"></i> CONTRATAR
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo"
-              aria-expanded="false"
-              aria-controls="collapseTwo"
-            >
-              <p>
-                <i class="fas fa-angle-double-right"></i>
-                PLAN 2
-              </p>
-            </button>
-          </h2>
-          <div
-            id="collapseTwo"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body">
-              <i class="fas fa-thumbs-up"></i>
-              Caracteristica 1 <br />
-              <i class="fas fa-thumbs-up"></i>
-              Caracteristica 1 <br />
-              <i class="fas fa-thumbs-up"></i>
-              Caracteristica 1 <br />
-              <br />
-              <i class="fas fa-dollar-sign"></i>
-              Precio<br />
+
+        <!-- Footer Start -->
+        <footer class="mt-5 header-background">
+          <div class="container text-white">
+            <div class="container pt-1">
+              <h5 class="mt-2">
+                <i class="far fa-envelope"></i>
+                CONTACTO
+              </h5>
+
+              <form class="needs-validation" action="https://formspree.io/f/meqvgrye" method="POST" novalidate>
+                <div class="mb-3">
+                  <label for="validationCustom01" class="form-label custom-TextOrange">Dirección de Mail</label>
+                  <input
+                    type="email"
+                    name="_replyto"
+                    class="form-control more-rounded"
+                    id="validationCustom01"
+                    required
+                  />
+                  <div class="invalid-feedback">Please, provide a valid email direction.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="validationCustom02" class="form-label custom-TextOrange">Su Mensaje</label>
+                  <textarea
+                    class="form-control text-area-size"
+                    name="message"
+                    id="validationCustom02"
+                    rows="14"
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback">Please, write your message here.</div>
+                </div>
+
+                <button type="submit" class="btn btn-outline-light mt-3">
+                  <i class="fas fa-paper-plane"></i> Submit
+                </button>
+              </form>
             </div>
-            <button class="btn btn-outline-success ms-3 mb-3" type="submit">
-              CONTRATAR
-              <i class="fas fa-shopping-cart"></i>
-            </button>
+
+            <div class="container">
+              <div class="mt-4 text-center">
+                <p>All Rights Reserved - Copyright (c) 2021 Diego Grassino</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </footer>
+        <!-- Footer End -->
 
-    <!-- Footer Start -->
-    <footer class="mt-5 header-background">
-      <div class="container text-white">
-        <div class="container pt-1">
-          <h5 class="mt-2">
-            <i class="far fa-envelope"></i>
-            CONTACTO
-          </h5>
+        <!-- Optional JavaScript; choose one of the two! -->
 
-          <form class="needs-validation" action="https://formspree.io/f/meqvgrye" method="POST" novalidate>
-            <div class="mb-3">
-              <label for="validationCustom01" class="form-label custom-TextOrange">Dirección de Mail</label>
-              <input type="email" name="_replyto" class="form-control more-rounded" id="validationCustom01" required />
-              <div class="invalid-feedback">Please, provide a valid email direction.</div>
-            </div>
-            <div class="mb-3">
-              <label for="validationCustom02" class="form-label custom-TextOrange">Su Mensaje</label>
-              <textarea
-                class="form-control text-area-size"
-                name="message"
-                id="validationCustom02"
-                rows="14"
-                required
-              ></textarea>
-              <div class="invalid-feedback">Please, write your message here.</div>
-            </div>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
 
-            <button type="submit" class="btn btn-outline-light mt-3">Submit</button>
-          </form>
-        </div>
-
-        <div class="container">
-          <div class="mt-4 text-center">
-            <p>All Rights Reserved - Copyright (c) 2021 Diego Grassino</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- Footer End -->
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     -->
-    <!-- Bootstrap Validation -->
-    <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function () {
-        'use strict';
 
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll('.needs-validation');
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
 
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms).forEach(function (form) {
-          form.addEventListener(
-            'submit',
-            function (event) {
-              if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-
-              form.classList.add('was-validated');
-            },
-            false
-          );
-        });
-      })();
-    </script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
-
-    <!-- FIREBASE -->
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+        <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
 
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: 'AIzaSyBMkzj7LZ24tmrUBbrDOdduiRrWEt4uGEg',
-        authDomain: 'cartacloud-576b7.firebaseapp.com',
-        projectId: 'cartacloud-576b7',
-        storageBucket: 'cartacloud-576b7.appspot.com',
-        messagingSenderId: '741852151583',
-        appId: '1:741852151583:web:afced28ef19f95bbb8fa2a',
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
-  </body>
+        <!-- // Your web app's Firebase configuration -->
+        <script>
+          var firebaseConfig = {
+            apiKey: 'AIzaSyBMkzj7LZ24tmrUBbrDOdduiRrWEt4uGEg',
+            authDomain: 'cartacloud-576b7.firebaseapp.com',
+            projectId: 'cartacloud-576b7',
+            storageBucket: 'cartacloud-576b7.appspot.com',
+            messagingSenderId: '741852151583',
+            appId: '1:741852151583:web:afced28ef19f95bbb8fa2a',
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          const auth = firebase.auth();
+        </script>
+
+        <!-- Custom JS -->
+        <script src="script/bootstrap-validation.js"></script>
+      </body>
+    </html>
+  </head>
 </html>
